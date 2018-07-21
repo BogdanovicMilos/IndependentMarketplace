@@ -22,11 +22,12 @@ public class LoginServlet extends HttpServlet {
         request.setAttribute("username", request.getParameter("username"));
         request.setAttribute("password", request.getParameter("password"));
 
-        if (userValidationModel.isValidUser(request.getParameter("username"), request.getParameter("password"))){
+        if (userValidationModel.isValidUser(request.getParameter("username"), request.getParameter("password"))) {
             request.getRequestDispatcher("/welcome.jsp").forward(request, response);
-        }else {
+        } else {
             request.setAttribute("errorMessage", "Invalid Username and/or Password. Try again");
             request.getRequestDispatcher("/login.jsp").forward(request, response);
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
