@@ -9,45 +9,96 @@
 <html>
   <head>
     <title>Independent</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+            background: white;
+        }
 
       #Logo {
           float: left;
-          padding: 20px;
-          background-color: silver;
+          padding: 6px;
+          background-color: transparent;
       }
 
       #Name{
-          font-size: 80px;
+          font-size: 50px;
           font-family: Haettenschweiler;
       }
 
       #Market{
           text-align: center;
           font-family: "Old English Text MT";
-          font-size: 40px;
+          font-size: 25px;
       }
 
-      #searchbox{
+      #searchId{
+          background-color: transparent;
+          border: none;
+          width: 50%;
+          display: inline-flex;
+          position: relative;
+          top: 40px;
+          left: 60px;
+          border-radius: 0.2em;
+
       }
 
-      #search{
-          width: 450px;
-          padding: 8px;
-          font-size: 10px;
+      #searchId::after{
+          content: "";
+          clear: both;
+          display: table;
       }
 
-      #submit{
-          width: auto;
-          padding: 8px;
-          font-size: 10px;
+      #searchBar{
+          width: 100%;
+          height: 30px;
+          padding: 10px;
+          border: 1px solid silver;
+          font-size: 12px;
+          border-radius: 0.2em 0 0 0.2em;
       }
 
-      #buttons{
-          float: right;
-          padding: 25px;
-          background-color: red;
+      #searchButton{
+          border: 1px solid silver;
+          width: 15%;
+          height: 30px;
+          font-size: 12px;
+          padding: 10px;
+          border-radius: 0 0.2em 0.2em 0;
+          cursor: pointer;
+      }
 
+      #searchButton:hover{
+          background-color: crimson;
+      }
+
+      #login a{
+          text-decoration: none;
+          position: relative;
+          background-color: transparent;
+          font-size: 18px;
+          color:#4a4540;
+          left: 935px;
+          top: 1px;
+          font-weight: bold;
+      }
+
+      #register a{
+          padding: 10px;
+          text-decoration: none;
+          position: relative;
+          background-color: crimson;
+          font-size: 18px;
+          color: white;
+          font-weight: bold;
+          left: 1010px;
+          top: -21px;
+          border: none;
+          border-radius: 20px;
       }
 
       input {
@@ -71,20 +122,19 @@
                 <div id="Market">Marketplace</div>
             </div>
 
-            <div id="searchbox">
-                <form action="" method="get">
-                    <input id="search" type="text" placeholder="Search..">
-                    <input id="submit" type="submit" value="Search">
+            <div id="searchBlock">
+                <form id="searchId" method="get">
+                    <input id="searchBar" type="search" placeholder="Type to search">
+                    <button id="searchButton" type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
 
-            <div id="buttons">
-                <form action="/login.jsp" method="get">
-                    <input type="submit" value="Sign In">
-                </form>
-                <form action="/registration.jsp" method="get">
-                    <input type="submit" value="Sign Up">
-                </form>
+            <div id="login">
+                    <a href="/login.jsp" type="submit">Login</a>
+            </div>
+
+            <div id="register">
+                    <a href="registration.jsp" type="submit">Sign Up</a>
             </div>
 
         </div>
