@@ -30,9 +30,11 @@
       }
 
       #Market{
-          text-align: center;
+          position: relative;
           font-family: "Old English Text MT";
           font-size: 25px;
+          left: 33px;
+
       }
 
       #searchId{
