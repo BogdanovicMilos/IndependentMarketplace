@@ -18,117 +18,144 @@
             background: white;
         }
 
-      #Logo {
-          float: left;
-          padding: 6px;
-          background-color: transparent;
-      }
+        #wrapper{
+            position: relative;
+            height: 20%;
+            left: 70px;
 
-      #Name{
-          font-size: 50px;
-          font-family: Haettenschweiler;
-      }
+        }
 
-      #Market{
-          position: relative;
-          font-family: "Old English Text MT";
-          font-size: 25px;
-          left: 33px;
+        #Logo {
+            position: relative;
+            line-height: 0px;
+            text-align: center;
+            float: left;
+            top: -20px;
+            padding: 10px;
+            background-color: transparent;
+        }
 
-      }
+        #Name{
+            font-size: 50px;
+            font-family: Haettenschweiler;
+            text-align: center;
+        }
 
-      #searchId{
-          background-color: transparent;
-          border: none;
-          width: 50%;
-          display: inline-flex;
-          position: relative;
-          top: 40px;
-          left: 60px;
-          border-radius: 0.2em;
+        #Market{
+            text-align: center;
+            position: relative;
+            font-family: "Old English Text MT";
+            font-size: 25px;
+            left: -5px;
 
-      }
+        }
 
-      #searchId::after{
-          content: "";
-          clear: both;
-          display: table;
-      }
+        #searchBlock{
+            width: 680px;
+            position: absolute;
+            left: 280px;
+            top: 70px;
+        }
 
-      #searchBar{
-          width: 100%;
-          height: 30px;
-          padding: 10px;
-          border: 1px solid silver;
-          font-size: 12px;
-          border-radius: 0.2em 0 0 0.2em;
-      }
+        #searchBar{
+            font-style: italic;
+            width: 600px;
+            height: 30px;
+            padding: 10px;
+            border: 1px solid silver;
+            font-size: 12px;
+            border-radius: 0.2em 0 0 0.2em;
+        }
 
-      #searchButton{
-          border: 1px solid silver;
-          width: 15%;
-          height: 30px;
-          font-size: 12px;
-          padding: 10px;
-          border-radius: 0 0.2em 0.2em 0;
-          cursor: pointer;
-      }
+        #searchButton{
+            position: relative;
+            left: -5px;
+            top: 2px;
+            border: 1px solid silver;
+            width: 75px;
+            height: 30px;
+            font-size: 12px;
+            padding: 10px;
+            border-radius: 0 0.2em 0.2em 0;
+            cursor: pointer;
+        }
 
-      #searchButton:hover{
-          background-color: crimson;
-      }
+        #searchButton:hover{
+            background-color: lightgray;
+        }
 
-      #login a{
-          text-decoration: none;
-          position: relative;
-          background-color: transparent;
-          font-size: 18px;
-          color:#4a4540;
-          left: 935px;
-          top: 1px;
-          font-weight: bold;
-      }
+        #login{
+            width: 200px;
+            position: relative;
+            top: -65px;
+            left: 1000px;
+        }
 
-      #register a{
-          padding: 10px;
-          text-decoration: none;
-          position: relative;
-          background-color: crimson;
-          font-size: 18px;
-          color: white;
-          font-weight: bold;
-          left: 1010px;
-          top: -21px;
-          border: none;
-          border-radius: 20px;
-      }
+        #login a{
+            text-decoration: none;
+            background-color: transparent;
+            font-size: 16px;
+            color:#4a4540;
+            font-weight: bold;
+            font-family: Arial;
+        }
+        
+        #register{
+            position: relative;
+            width: 100px;
+            left: 1100px;
+            top: -85px;
+        }
 
-      input {
-        background-color: white;
-        color: black;
-        border: 2px solid;
-        border-radius: 8px;
-        padding: 6px 20px;
-        font-size: 12px;
-          font-style: italic;
-      }
+        #register a{
+            padding: 7px 15px 7px 15px;
+            text-decoration: none;
+            background-color: royalblue;
+            font-size: 16px;
+            color: white;
+            font-weight: bold;
+            font-family: Arial;
+            border: none;
+            border-radius: 3px;
+        }
+
+        #sideNav {
+            height: 100%;
+            width: 190px;
+            position: relative;
+            top: 50px;
+            background-color: transparent;
+            border: 1px solid black;
+        }
+
+        #sideNav a{
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+
+        .main{
+            position: relative;
+            left: 70px;
+            padding: 10px;
+        }
+
 
     </style>
   </head>
   <body>
-    <header>
-        <div id="wrapper">
+    <header id="wrapper">
 
             <div id="Logo">
-                <div id="Name">INDEPENDENT</div>
-                <div id="Market">Marketplace</div>
+                <p id="Name">INDEPENDENT</p>
+                <p id="Market">Marketplace</p>
             </div>
 
             <div id="searchBlock">
-                <form id="searchId" method="get">
                     <input id="searchBar" type="search" placeholder="Type to search">
                     <button id="searchButton" type="submit"><i class="fa fa-search"></i></button>
-                </form>
             </div>
 
             <div id="login">
@@ -136,10 +163,16 @@
             </div>
 
             <div id="register">
-                    <a href="registration.jsp" type="submit">Sign Up</a>
+                    <a href="/registration.jsp" type="submit">Sign Up</a>
             </div>
-
-        </div>
     </header>
+    <main class="main">
+        <div id="sideNav">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+    </main>
   </body>
 </html>

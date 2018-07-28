@@ -21,9 +21,6 @@ public class Registration extends HttpServlet {
 
             String username, password, email;
 
-            PrintWriter out = response.getWriter();
-            response.setContentType("text/html");
-
             username = request.getParameter("username").toString();
             password = request.getParameter("password").toString();
             email = request.getParameter("email").toString();

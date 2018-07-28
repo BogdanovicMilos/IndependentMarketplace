@@ -22,12 +22,11 @@ public class Login extends HttpServlet {
 
         String username, password;
 
-        request.setAttribute("username", request.getParameter("username"));
-        request.setAttribute("password", request.getParameter("password"));
-        response.setContentType("text/html");
-
         username = request.getParameter("username").toString();
         password = request.getParameter("password").toString();
+
+        request.setAttribute("username", request.getParameter("username"));
+        request.setAttribute("password", request.getParameter("password"));
 
         try {
             Connection connection = DBConnection.connection();
@@ -39,7 +38,7 @@ public class Login extends HttpServlet {
                 requestDispatcher.forward(request, response);
                 connection.close();
             }else{
-                request.setAttribute("errorMessage", "Invalid Username and/or Password. Try again");
+                request.setAttribute("errorMessage", "Invalid Username or/and Password. Try again.");
                 request.getRequestDispatcher("/login.jsp").forward(request, response);
             }
             connection.close();

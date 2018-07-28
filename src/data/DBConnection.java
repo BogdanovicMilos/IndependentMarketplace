@@ -19,7 +19,6 @@ public class DBConnection {
 
         try {
             Class.forName(JDBC_DRIVER);
-
             System.out.println("Connecting to database...");
             connection = DriverManager.getConnection(DB_URL, USER, PASS);
 
