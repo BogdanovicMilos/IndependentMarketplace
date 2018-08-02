@@ -71,7 +71,7 @@
         }
 
         #signIn:hover{
-            background-color: lightgray;
+            border: 1px solid blue;
         }
 
         #Logo{
@@ -101,7 +101,6 @@
             position: relative;
             top: 15px;
         }
-
     </style>
 </head>
 <body>

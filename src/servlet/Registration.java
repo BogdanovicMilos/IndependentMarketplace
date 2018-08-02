@@ -14,13 +14,14 @@ import java.sql.*;
 /**
  * Created by Milos on 7/23/2018.
  */
-@WebServlet(name = "Registration")
+@WebServlet(name = "/registration")
 public class Registration extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
             String username, password, email;
 
+            response.setContentType("text/html");
             username = request.getParameter("username").toString();
             password = request.getParameter("password").toString();
             email = request.getParameter("email").toString();

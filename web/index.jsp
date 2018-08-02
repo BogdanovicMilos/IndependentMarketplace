@@ -14,15 +14,16 @@
 
         body{
             margin: 0;
-            padding: 0;
+            padding-left: 20px;
+            padding-right: 20px;
             background: white;
         }
 
         #wrapper{
             position: relative;
             height: 20%;
-            left: 70px;
-
+            background-color: white;
+            border: 1px solid whitesmoke;
         }
 
         #Logo {
@@ -51,15 +52,14 @@
         }
 
         #searchBlock{
-            width: 680px;
             position: absolute;
-            left: 280px;
-            top: 70px;
+            left: 710px;
+            top: 6px;
         }
 
         #searchBar{
             font-style: italic;
-            width: 600px;
+            width: 520px;
             height: 30px;
             padding: 10px;
             border: 1px solid silver;
@@ -78,17 +78,18 @@
             padding: 10px;
             border-radius: 0 0.2em 0.2em 0;
             cursor: pointer;
+            background-color: white;
         }
 
         #searchButton:hover{
-            background-color: lightgray;
+            border: 1px solid royalblue;
         }
 
         #login{
             width: 200px;
             position: relative;
-            top: -65px;
-            left: 1000px;
+            top: -51px;
+            left: 1130px;
         }
 
         #login a{
@@ -103,8 +104,8 @@
         #register{
             position: relative;
             width: 100px;
-            left: 1100px;
-            top: -85px;
+            left: 1214px;
+            top: -70px;
         }
 
         #register a{
@@ -119,29 +120,21 @@
             border-radius: 3px;
         }
 
-        #sideNav {
-            height: 100%;
-            width: 190px;
+        .nav{
+            width: 100%;
             position: relative;
-            top: 50px;
-            background-color: transparent;
-            border: 1px solid black;
-        }
-
-        #sideNav a{
-            padding: 6px 8px 6px 16px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
+            height: 45px;
+            background-color: whitesmoke;
         }
 
         .main{
+            height: 100%;
+            top: 0.5%;
+            width: 98.3%;
+            border: 1px solid lightgray;
             position: relative;
-            left: 70px;
             padding: 10px;
         }
-
 
     </style>
   </head>
@@ -153,11 +146,6 @@
                 <p id="Market">Marketplace</p>
             </div>
 
-            <div id="searchBlock">
-                    <input id="searchBar" type="search" placeholder="Type to search">
-                    <button id="searchButton" type="submit"><i class="fa fa-search"></i></button>
-            </div>
-
             <div id="login">
                     <a href="/login.jsp" type="submit">Login</a>
             </div>
@@ -166,13 +154,17 @@
                     <a href="/registration.jsp" type="submit">Sign Up</a>
             </div>
     </header>
-    <main class="main">
-        <div id="sideNav">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+    <nav class="nav">
+        <div id="searchBlock">
+            <input id="searchBar" type="search" placeholder="Type to search">
+            <button id="searchButton" type="submit"><i class="fa fa-search"></i></button>
         </div>
+    </nav>
+    <main class="main">
+
+
+
+
     </main>
   </body>
 </html>

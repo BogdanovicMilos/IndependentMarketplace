@@ -16,7 +16,7 @@ import java.sql.Statement;
 /**
  * Created by Milos on 7/21/2018.
  */
-@WebServlet(name = "Login")
+@WebServlet(name = "/login")
 public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

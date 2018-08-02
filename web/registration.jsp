@@ -71,7 +71,7 @@
         }
 
         #signUp:hover{
-            background-color: lightsteelblue;
+            border: 1px solid blue;
         }
 
         #Logo{
@@ -112,7 +112,7 @@
             <p id="Market">Marketplace</p>
         </div>
 
-        <form action="/registration.jsp" method="post">
+        <form action="/registration" method="post">
             <div class="regForm">
                 <i class="fa fa-user" aria-hidden="true"></i>
                 <input type="text" name="username" placeholder="Username"/>
